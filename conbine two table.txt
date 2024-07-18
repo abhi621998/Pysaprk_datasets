@@ -1,0 +1,31 @@
+
+# Person table:
+
+person_data  = [(1, "Wang", "Allen"),
+         (2, "Alice", "Bob")]
+
+person_schema = ["personId", "lastName", "firstName"]
+
+
+person_df = spark.createDataFrame(data = person_data, schema = person_schema)
+person_df.display()
+
+
+
+
+
+
+# Address table:
+
+address_data = [(1, 2, "New York City", "New York"),
+        (2, 3, "Leetcode", "California")]
+
+address_schema = ["addressId", "personId", "city", "state"]
+
+address_df = spark.createDataFrame(data = address_data, schema = address_schema)
+address_df.display()
+
+
+
+
+
