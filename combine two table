@@ -1,0 +1,7 @@
+emp_data = [(1, 100), (2, 200), (3, 300)]
+
+emp_schema = ["id", "salary"]
+
+emp_df  = spark.createDataFrame(data = emp_data, schema = emp_schema)
+
+emp_df.show()
