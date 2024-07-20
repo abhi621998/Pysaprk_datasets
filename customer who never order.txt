@@ -1,0 +1,8 @@
+customer_data = [(1, "Joe"), (2, "Henry"), (3, "Sam"), (4, "Max")]
+
+customer_schema = StructType([(StructField("id", IntegerType(), True)),
+                              (StructField("name", StringType(), True))])
+
+customer_df = spark.createDataFrame(data = customer_data, schema = customer_schema)
+
+customer_df.show()
