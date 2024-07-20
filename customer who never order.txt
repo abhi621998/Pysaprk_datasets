@@ -1,3 +1,8 @@
+
+#customer data
+----------------------------------------------------------------------------------
+
+
 customer_data = [(1, "Joe"), (2, "Henry"), (3, "Sam"), (4, "Max")]
 
 customer_schema = StructType([(StructField("id", IntegerType(), True)),
@@ -6,3 +11,15 @@ customer_schema = StructType([(StructField("id", IntegerType(), True)),
 customer_df = spark.createDataFrame(data = customer_data, schema = customer_schema)
 
 customer_df.show()
+
+
+#order data
+---------------------------------------------------------------------------
+
+
+order_schema = StructType([StructField("id", IntegerType(), True),
+                           StructField("customerid", IntegerType(), True)])
+
+order_df = spark.createDataFrame(data = order_data, schema = order_schema)
+
+order_df.display()
