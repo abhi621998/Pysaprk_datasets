@@ -1,0 +1,7 @@
+email_data = [(1, "john@example.com"), (2, "bob@example.com"), (3, "john@example.com")]
+
+email_schema = ["id", "email"]
+
+email_df = spark.createDataFrame(data = email_data, schema = email_schema)
+
+email_df.show()
