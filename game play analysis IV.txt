@@ -2,6 +2,6 @@ game_data = [(1, 2, "2016-03-01", 5), (1, 2, "2016-03-02", 6), (2, 3, "2017-06-2
 
 game_schema = ["player_id", "device_id", "event_date", "game_played"]
 
-game_df = spark.createDataFrame(data = g_data, schema = g_schema)
+game_df = spark.createDataFrame(data = game_data, schema = game_schema)
 
 game_df.show()
