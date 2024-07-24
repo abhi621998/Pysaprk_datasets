@@ -1,0 +1,28 @@
+## Employee data
+---------------------------------------------------------------------
+
+emp_schema = ["empId", "name", "supervisor", "salary"]
+emp_data = [
+ (3, 'Brad'    ,None  , 4000),
+ (1, 'John'    ,3   , 1000),
+ (2, 'Dan'     ,3   , 2000),
+ (4, 'Thomas'  ,3   , 4000)
+]
+
+emp_df = spark.createDataFrame(data = emp_data, schema = emp_schema)
+
+emp_df.display()
+
+## Bonus data
+----------------------------------------------------------------------
+bonus_schema=  ["empId",  "bonus"]
+
+bonus_data = [
+ (2, 500),
+ (4, 2000)
+]
+
+
+bonus_df = spark.createDataFrame(data = bonus_data, schema= bonus_schema)
+
+bonus_df.display()
