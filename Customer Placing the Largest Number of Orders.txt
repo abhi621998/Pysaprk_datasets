@@ -1,0 +1,7 @@
+cust_data = [(1, 1), (2, 2), (3, 3), (4, 3)]
+
+cust_schema = ["order_number", "customer_number"]
+
+cust_df = spark.createDataFrame(data = cust_data, schema = cust_schema)
+
+cust_df.show()
