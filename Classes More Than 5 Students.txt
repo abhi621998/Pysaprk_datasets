@@ -1,0 +1,15 @@
+course_data = [("A", "Math"),
+               ("B", "English"),
+               ("C", "Math"),
+               ("D", "Biology"),
+               ("E", "Math"),
+               ("F", "Computer"),
+               ("G", "Math"),
+               ("H", "Math"),
+               ("I", "Math")]
+
+course_schema = ["student", "class"]
+
+course_df = spark.createDataFrame(data = course_data, schema = course_schema)
+
+course_df.display()
